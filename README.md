@@ -1,22 +1,48 @@
-# web-to-app
+# Web-to-App APK Builder
 
-Android source code for android apk file of your website.
+This project is a Streamlit-based tool that allows you to convert any website into an Android APK. It packages a WebView inside a native Android application and customizes it with your own app label, URL, package name, and icon.
 
-Easy and fast way of creating android mobile app for your website.
+## Features
 
-Just change the url in the  MainActivity.java to your website hostname  then you  are  good to go. 
+- Generate Android APKs from any website URL  
+- Customizable app name and icon  
+- Dynamically applies unique package names (e.g., `com.yourname`)  
+- Supports both `assembleDebug` and `assembleRelease` Gradle builds  
+- Automatically removes old Java source folders to avoid build conflicts
 
-You can do customization such  as changing the app icon with your logo and other rich features.
+## Requirements
 
-web-to-app.apk is the built sample from the source code. The app loads https://successtar.github.io/ on launch.
+- Python 3.8 or newer  
+- Android SDK and Gradle (ensure `gradlew.bat` or `gradlew` is available)  
+- Java JDK 8 or higher  
+- Python packages:  
+  - Pillow  
+  - Streamlit  
 
-You can install and run web-to-app.apk (android application of your website) on your android phone to see how your website will look like and the behaviour if you use this source code.
+Install dependencies:
 
+```bash
+pip install pillow streamlit
+Running the App
+Open your terminal and execute:
+```
 
-![web-to-app-1](https://github.com/user-attachments/assets/459dd517-2522-47a5-b9cb-edb07eb54fd9)
+```bash
+streamlit run streamlit_app.py
+```
+This will launch the web interface in your browser.
 
-![web-to-app-2](https://github.com/user-attachments/assets/92d5e3af-d10b-400f-bba1-dd16e6f137e4)
+Usage
+Enter your app label (e.g., My App)
 
-![web-to-app-3](https://github.com/user-attachments/assets/505a6ca5-2d3a-47c2-b64c-9b1d35646151)
+Enter your website URL (e.g., https://example.com)
 
+Enter a unique package name (e.g., myuniqueapp)
 
+Upload an app icon (JPG, PNG, BMP, etc.)
+
+Select build type: assembleDebug or assembleRelease
+
+Click "Generate APK"
+
+The built APK will be available for download once the process completes.
